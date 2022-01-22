@@ -21,7 +21,6 @@ public class WebCrawlerController {
     public WebCrawlerController(WebCrawService webCrawService){
         this.webCrawService = webCrawService;
     }
-
     
     @GetMapping("greeting")
     public String getGreeting(){

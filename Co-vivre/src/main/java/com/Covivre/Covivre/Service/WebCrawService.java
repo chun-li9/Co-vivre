@@ -1,5 +1,6 @@
 package com.Covivre.Covivre.Service;
 
+import com.fasterxml.jackson.databind.JsonSerializer;
 import org.apache.http.HttpEntity;
 import org.apache.http.StatusLine;
 import org.apache.http.client.methods.CloseableHttpResponse;
@@ -80,8 +81,26 @@ public class WebCrawService {
         return result;
     }
 
+    public ArrayList<String> getCityName(String postalCode) throws IOException {
+        String[] cities = {"Ahuntsic+Cartierville","Anjou","Anjou","Beaconsfield","Côte+des+Neiges+Notre+Dame+de+Grâce",
+        "Côte+Saint+Luc","Dollard+des+Ormeaux","Dorval","Hampstead","Kirkland","Lachine","Lachine",
+        "L'Île+Bizard+Sainte+Geneviève","Mercier+Hochelaga+Maisonneuve","Montréal+Est","Montréal+Nord",
+        "Montréal+Ouest","Mont-Royal","Outremont","Pierrefonds+Roxboro","Plateau+Mont+Royal",
+        "Pointe+Claire","Rivière+des+Prairies+Pointe+aux+ Trembles","Rosemont+La Petite Patrie","Sainte+Anne+de+Bellevue",
+        "Saint+Laurent","Saint+Léonard","Senneville","Sud+Ouest","Verdun","Ville+Marie","Villeray+Saint+Michel+Parc+Extension",
+        "Westmount"};
+
+        String[] cityTwo = {"Anjou"};
+
+
+
+
+        return null;
+    }
+
     public static void main(String[] args) throws IOException {
         WebCrawService webCrawService= new WebCrawService();
-        System.out.println(webCrawService.getCases());
+        //System.out.println(webCrawService.getCases());
+        webCrawService.getCityName("post");
     }
 }
