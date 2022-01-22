@@ -144,3 +144,71 @@ nav#primary h1{
 nav.next-prev{
     margin:20px 0 0 0;
 }
+a.prev,a.next{
+    display: block;
+    width: 15px;
+    height:11px;
+    text-indent: -9999px;
+}
+a.prev{
+    margin:0 auto 5px auto;
+    background:transparent url("/Co-vivre-frontend/assets/scroll-arrow-up.png") 0 0 no-repeat;
+
+}
+
+a.prev:hover{
+    background: transparent url("/Co-vivre-frontend/assets/scroll-arrow-up.png") 0 -11 no-repeat;
+}
+
+a.next{
+    margin: 5px auto 0 auto;
+    background: transparent url("/Co-vivre-frontend/assets/scroll-arrow-down.png") -1px 0 no-repeat;
+}
+
+a.next:hover{
+    background: transparent url("/Co-vivre-frontend/assets/scroll-arrow-down.png") -1px -11px no-repeat;
+}
+
+#content{
+    z-index:4;
+    position:relative;
+    max-width: 940px;
+    padding:0 10px;
+    margin:0 auto;
+    line-height:1.7;
+}
+
+#content article{
+    width:300px;
+}
+#situation,#vaccin,#useful-link,#self-report{
+    padding-top: 105px;
+}
+
+#situation{
+    position: absolute;
+    top: 0px;
+}
+
+#vaccin{
+    position: absolute;
+    top:1090px;
+}
+
+#useful-link{
+    position: absolute;
+    top:2180px;
+}
+
+#content h1{
+    margin: 0 0 25px 0;
+    font-size:60px;
+    font-family:Georgia, sans-serif;
+    font-weight:normal;
+    line-height: 65px;
+}
+
+#self-report{
+    position: absolute;
+    top:3270px;
+}
