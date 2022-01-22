@@ -6,6 +6,9 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
+import java.io.IOException;
+import java.util.ArrayList;
+
 @RestController
 @RequestMapping(path = "api/v1/data")
 public class WebCrawlerController {
@@ -20,6 +23,11 @@ public class WebCrawlerController {
     @GetMapping("greeting")
     public String getGreeting(){
         return("welcome to covivre!~");
+    }
+
+    @GetMapping("basicData")
+    public ArrayList<String> getBasicData() throws IOException {
+        return webCrawService.getCases();
     }
 
 }

@@ -45,20 +45,21 @@ public class WebCrawService {
         for(int i=0;i<lines.length;i++){
             if(lines[i].contains("Total for Montréal")){
                 count = i+1;
+                break;
             }
         }
-
         for(int i=0;i<5;i++){
-            data.add()
+            data.add(lines[i+count]);
         }
-
-
-
+        for(int i=0;i<data.size();i++){
+            String[] aLine = data.get(i).split("<");
+            result.add(aLine[2].split(">")[1]);
+        }
         return result;
     }
 
     public static void main(String[] args) throws IOException {
         WebCrawService webCrawService= new WebCrawService();
-        webCrawService.getCases();
+        System.out.println(webCrawService.getCases());
     }
 }
