@@ -30,16 +30,17 @@ public class WebCrawService {
         System.out.println(line.getStatusCode());
         HttpEntity entity = response.getEntity();
         String html = EntityUtils.toString(entity,"utf-8");
+        
         response.close();
         foo.close();
 
-        //System.out.println(html);
+//        System.out.println(html);
         System.out.println("start to initialize the jsoup class-------------------");
         Document document = Jsoup.parse(html);
         Elements elements = document.getElementsByClass("contenttable");
-        //System.out.println(elements.toString());
+        System.out.println(elements.toString());
 
-        String[] lines = elements.toString().split(System.getProperty("line.separator"));
+        String[] lines = elements.toString().split("\n");
         ArrayList<String> data = new ArrayList<>();
         int count = 0;
         for(int i=0;i<lines.length;i++){
@@ -47,6 +48,7 @@ public class WebCrawService {
                 count = i+1;
                 break;
             }
+            System.out.println(lines[i]);
         }
         for(int i=0;i<5;i++){
             data.add(lines[i+count]);
