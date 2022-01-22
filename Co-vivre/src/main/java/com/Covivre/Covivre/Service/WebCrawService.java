@@ -38,7 +38,7 @@ public class WebCrawService {
         System.out.println("start to initialize the jsoup class-------------------");
         Document document = Jsoup.parse(html);
         Elements elements = document.getElementsByClass("contenttable");
-        System.out.println(elements.toString());
+        //System.out.println(elements.toString());
 
         String[] lines = elements.toString().split("\n");
         ArrayList<String> data = new ArrayList<>();
@@ -48,7 +48,7 @@ public class WebCrawService {
                 count = i+1;
                 break;
             }
-            System.out.println(lines[i]);
+            //System.out.println(lines[i]);
         }
         for(int i=0;i<5;i++){
             data.add(lines[i+count]);
@@ -57,6 +57,26 @@ public class WebCrawService {
             String[] aLine = data.get(i).split("<");
             result.add(aLine[2].split(">")[1]);
         }
+        String death = "";
+        for(String eachLine:lines){
+            if(eachLine.contains("Number of deaths")){
+                death = eachLine;
+                break;
+            }
+        }
+        death = death.split("h3")[1].replaceAll("[></]","");
+
+        String recovered = "";
+        for(String eachLine:lines){
+            if(eachLine.contains("Recovered cases")){
+                recovered = eachLine;
+                break;
+            }
+        }
+        recovered = recovered.split("h3")[1].replaceAll("[></]","");
+
+        result.add(death);
+        result.add(recovered);
         return result;
     }
 
