@@ -5,12 +5,105 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <link rel="stylesheet" media="all" href="main.css"/>
     <script src="app.js"></script>
 </head>
 <body>
-    <h1>hello world</h1>
-    <div>
-        <h1>The greeting:  <span id="greeting"></span></h1>
+    <div id="wraper">
+
+        <header id="branding">
+            <h1>COVID</h1>
+        </header>
+        <nav id="primary">
+            <ul>
+                <li>
+                    <h1>Situation</h1>
+                    <a class="situation" href="#situation">View</a>
+                </li>
+
+                <li>
+                    <h1>Vaccin</h1>
+                    <a class="vaccin" href="#vaccin">View</a>
+                </li>
+
+                <li>
+                    <h1>Useful link</h1>
+                    <a class="useful-link" href="#useful-link">View</a>
+                </li>
+
+                <li>
+                    <h1>Self report</h1>
+                    <a class="self-report" href="#self-report">View</a>
+                </li>
+            </ul>
+        </nav>
+        <div id="content">
+            <article id = "situation">
+                <header>
+                    <h1>Situation</h1>
+                </header>
+                <p>
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Magnam vero quasi explicabo exercitationem! Consectetur autem rerum sequi, quo cum asperiores tempore illum ullam corporis optio at dicta assumenda eaque nam.
+                </p>
+                <nav class="next-prev">
+                    <hr>
+                    <a class="next vaccin" href="#vaccin">Next</a>
+                </nav>
+            </article>
+
+            <article id = "vaccin">
+                <header>
+                    <h1>vaccin</h1>
+                </header>
+                <p>
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Magnam vero quasi explicabo exercitationem! Consectetur autem rerum sequi, quo cum asperiores tempore illum ullam corporis optio at dicta assumenda eaque nam.
+                </p>
+                <nav class="next-prev">
+                    <a class="prev situation" href="#situation">Prev</a>
+                    <hr>
+                    <a class="next useful-link" href="#useful-link">Next</a>
+                </nav>
+            </article>
+
+            <article id = "useful-link">
+                <header>
+                    <h1>Useful Link</h1>
+                </header>
+                <p>
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Magnam vero quasi explicabo exercitationem! Consectetur autem rerum sequi, quo cum asperiores tempore illum ullam corporis optio at dicta assumenda eaque nam.
+                </p>
+                <nav class="next-prev">
+                    <a class="prev vaccin" href="#vaccin">Prev</a>
+                    <hr>
+                    <a class="next self-report" href="#self-report">Next</a>
+                </nav>
+            </article>
+
+            <article id = "self-report">
+                <header>
+                    <h1>Self Report</h1>
+                </header>
+                <p>
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Magnam vero quasi explicabo exercitationem! Consectetur autem rerum sequi, quo cum asperiores tempore illum ullam corporis optio at dicta assumenda eaque nam.
+                </p>
+                <nav class="next-prev">
+                    <a class="prev useful-link" href="#useful-link">Prev</a>
+                    <hr>
+                </nav>
+            </article>
+
+
+
+
+        </div>
     </div>
+
+
+
+
+
+
+
+
 </body>
 </html>

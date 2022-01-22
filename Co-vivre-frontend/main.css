@@ -1,0 +1,146 @@
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+
+article,aside,details,figcaption,figure,footer,header,hgroup,menu,nav,section{
+    display: block;
+}
+
+body{
+    line-height: 1;
+}
+
+ol,ul {
+    list-style: none;
+}
+
+blockquote,q{
+    quotes:none;
+}
+
+blockquote:before,blockquote:after, q:before, q:after{
+    content: '';
+    content:none;
+}
+table{
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+
+html{
+    overflow-y:scroll;
+}
+
+body{
+    background:#e3e5e5;
+    overflow-x: hidden;
+    height: 4550px;
+    line-height: 1.5;
+    color: #000;
+    font-size: 14px;
+    font-family: Arial,sans-serif;
+}
+h1{
+    color:#21a97e
+}
+a, a:link, a:active, a:visited {
+    -webkit-transition: color 0.25s ease-out;
+    -moz-transition: color 0.25s ease-out;
+    -o-transition: color 0.25s ease-out;
+    transition: color 0.25s ease-out;
+    color:#21a97e;
+    outline:none;
+    text-decoration: none;
+}
+a:hover{
+    color:#000;
+}
+
+img{
+    display:block;
+}
+
+p{
+    margin:lem 0;
+}
+
+hr{
+    margin: 0;
+    border:none;
+    border-top: 1px solid #3b3b3b;
+    border-bottom: 1px solid #3b3b3b;
+    height: 3px;
+}
+
+#wrapper{
+    position: relative;
+}
+
+#branding{
+    width: 100%;
+    background: #fff;
+}
+#branding h1{
+    width:940px;
+    padding: 10px 15px;
+    margin: 0 auto;
+    text-transform: uppercase;
+    font-size:18px;
+    font-weight: bold;
+}
+
+nav#primary{
+    z-index: 5;
+    position: fixed;
+    top:50%;
+    right:16px;
+    margin-top: -40px;
+}
+
+nav#primary li{
+    position:relative;
+    height: 20px;
+}
+
+nav#primary a{
+    display:block;
+    width:20px;
+    height:20px;
+    text-indent: -9999px;
+    background: transparent url("/Co-vivre-frontend/assets/nav-dot.png") 4px 4px no-repeat
+}
+
+nav#primary a:hover, nav#primary a.active{
+    background:transparent url("/Co-vivre-frontend/assets/nav-dot.png") 4px -16px no-repeat
+}
+
+nav#primary h1{
+    position: absolute;
+    right:22px;
+    top:-7px;
+    display: none;
+    padding: 4px 20px 4px 7px;
+    white-space: nowrap;
+    background: transparent;
+}
+
+nav.next-prev{
+    margin:20px 0 0 0;
+}
