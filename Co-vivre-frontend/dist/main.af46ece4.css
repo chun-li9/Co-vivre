@@ -124,11 +124,11 @@ nav#primary a{
     width:20px;
     height:20px;
     text-indent: -9999px;
-    background: transparent url("/assets/nav-dot.png") 4px 4px no-repeat
+    background: transparent url("/nav-dot.7653e129.png") 4px 4px no-repeat
 }
 
 nav#primary a:hover, nav#primary a.active{
-    background:transparent url("/assets/nav-dot.png") 4px -16px no-repeat
+    background:transparent url("/nav-dot.7653e129.png") 4px -16px no-repeat
 }
 
 nav#primary h1{
@@ -154,21 +154,21 @@ a.prev,a.next{
 }
 a.prev{
     margin:0 auto 5px auto;
-    background:transparent url("/assets/scroll-arrow-up.png") 0 0 no-repeat;
+    background:transparent url("/scroll-arrow-up.ca6c27a6.png") 0 0 no-repeat;
 
 }
 
 a.prev:hover{
-    background: transparent url("/assets/scroll-arrow-up.png") 0 -11 no-repeat;
+    background: transparent url("/scroll-arrow-up.ca6c27a6.png") 0 -11 no-repeat;
 }
 
 a.next{
     margin: 5px auto 0 auto;
-    background: transparent url("/assets/scroll-arrow-down.png") -1px 0 no-repeat;
+    background: transparent url("/scroll-arrow-down.4b6bb012.png") -1px 0 no-repeat;
 }
 
 a.next:hover{
-    background: transparent url("/assets/scroll-arrow-down.png") -1px -11px no-repeat;
+    background: transparent url("/scroll-arrow-down.4b6bb012.png") -1px -11px no-repeat;
 }
 
 #content{
@@ -343,3 +343,5 @@ a.next:hover{
       top: 1020px;
       left: 450px;
       }
+
+/*# sourceMappingURL=/main.af46ece4.css.map */
