@@ -2688,11 +2688,14 @@ function asyncGeneratorStep(gen, resolve, reject, _next, _throw, key, arg) { try
 function _asyncToGenerator(fn) { return function () { var self = this, args = arguments; return new Promise(function (resolve, reject) { var gen = fn.apply(self, args); function _next(value) { asyncGeneratorStep(gen, resolve, reject, _next, _throw, "next", value); } function _throw(err) { asyncGeneratorStep(gen, resolve, reject, _next, _throw, "throw", err); } _next(undefined); }); }; }
 
 var BASE_URL = 'http://localhost:8080/api/v1/data';
-var hello;
+var dailyConfirmed;
+var totalConfirmed;
+var totalRecovered;
+var totalDeath;
 
 var getgreeting = /*#__PURE__*/function () {
   var _ref = _asyncToGenerator( /*#__PURE__*/regeneratorRuntime.mark(function _callee() {
-    var response, greetingItems;
+    var response, cases;
     return regeneratorRuntime.wrap(function _callee$(_context) {
       while (1) {
         switch (_context.prev = _context.next) {
@@ -2703,23 +2706,29 @@ var getgreeting = /*#__PURE__*/function () {
 
           case 3:
             response = _context.sent;
-            greetingItems = response.data;
-            console.log("GET: Here's the greeting", greetingItems);
-            hello = response.data;
-            document.getElementById("greeting").innerHTML = hello;
-            return _context.abrupt("return", greetingItems);
+            cases = response.data;
+            console.log("GET: Here's the result", cases);
+            dailyConfirmed = cases[0];
+            document.getElementById("dailyConfirmed").innerHTML = dailyConfirmed;
+            totalConfirmed = cases[3];
+            document.getElementById("totalConfirmed").innerHTML = totalConfirmed;
+            totalRecovered = cases[6];
+            document.getElementById("totalRecovered").innerHTML = totalRecovered;
+            totalDeath = cases[5];
+            document.getElementById("totalDeath").innerHTML = totalDeath;
+            return _context.abrupt("return", cases);
 
-          case 11:
-            _context.prev = 11;
+          case 17:
+            _context.prev = 17;
             _context.t0 = _context["catch"](0);
             console.log(_context.t0);
 
-          case 14:
+          case 20:
           case "end":
             return _context.stop();
         }
       }
-    }, _callee, null, [[0, 11]]);
+    }, _callee, null, [[0, 17]]);
   }));
 
   return function getgreeting() {

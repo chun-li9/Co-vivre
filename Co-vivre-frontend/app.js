@@ -2,15 +2,29 @@ import 'regenerator-runtime/runtime';
 import axios from 'axios';
 
 const BASE_URL='http://localhost:8080/api/v1/data';
-var hello;
+var dailyConfirmed;
+var totalConfirmed;
+var totalRecovered;
+var totalDeath;
 const getgreeting = async() => {
     try{
         const response = await axios.get(`${BASE_URL}/basicData`);
-        const greetingItems=response.data;
-        console.log(`GET: Here's the greeting`,greetingItems);
-        hello=response.data;
-        document.getElementById("greeting").innerHTML = hello;
-        return greetingItems;
+        var cases=response.data;
+        console.log(`GET: Here's the result`,cases);
+
+        dailyConfirmed = cases[0];
+        document.getElementById("dailyConfirmed").innerHTML = dailyConfirmed;
+
+        totalConfirmed = cases[3];
+        document.getElementById("totalConfirmed").innerHTML = totalConfirmed;
+
+        totalRecovered = cases[6];
+        document.getElementById("totalRecovered").innerHTML = totalRecovered;
+
+        totalDeath = cases[5];
+        document.getElementById("totalDeath").innerHTML = totalDeath;
+
+        return cases;
     }catch (errors){
         console.log(errors);
     }
