@@ -9,11 +9,14 @@ const getgreeting = async() => {
         const greetingItems=response.data;
         console.log(`GET: Here's the greeting`,greetingItems);
         hello=response.data;
+        document.getElementById("greeting").innerHTML = hello;
         return greetingItems;
     }catch (errors){
         console.log(errors);
     }
 };
+
+
 
 window.onload = (event) => {
     getgreeting();
