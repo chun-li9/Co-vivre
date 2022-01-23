@@ -1,3 +1,10 @@
+:root {
+    --pink: #f4ded3;
+    --brown: #a04b40;
+    --rice: #f1e5e2d3;
+    --grey: #6d2214;
+}
+
 html, body, div, span, applet, object, iframe,
 h1, h2, h3, h4, h5, h6, p, blockquote, pre,
 a, abbr, acronym, address, big, cite, code,
@@ -51,21 +58,23 @@ html{
 body{
     background:#f4ded3;
     overflow-x: hidden;
-    height: 4550px;
+    height: 4350px;
     line-height: 1.5;
     color: #000;
     font-size: 14px;
-    font-family: Arial,sans-serif;
+    font-family: Georgia, serif;
 }
+
 h1{
-    color:#bc5648
+    color:var(--brown);
 }
+
 a, a:link, a:active, a:visited {
     -webkit-transition: color 0.25s ease-out;
     -moz-transition: color 0.25s ease-out;
     -o-transition: color 0.25s ease-out;
     transition: color 0.25s ease-out;
-    color:#bc5648;
+    color:var(--brown);
     outline:none;
     text-decoration: none;
 }
@@ -104,6 +113,7 @@ hr{
     text-transform: uppercase;
     font-size:18px;
     font-weight: bold;
+    color:var(--brown);
 }
 
 nav#primary{
@@ -121,18 +131,18 @@ nav#primary li{
 
 nav#primary a{
     display:block;
-    width:20px;
+    width: 25px;
     height:20px;
     text-indent: -9999px;
-    background: transparent url("/nav-dot.7653e129.png") 4px 4px no-repeat
+    background: transparent url("/nav-dot.7653e129.png") 5px 0px no-repeat
 }
 
 nav#primary a:hover, nav#primary a.active{
-    background:transparent url("/nav-dot.7653e129.png") 4px -16px no-repeat
+    background:transparent url("/nav-dot.7653e129.png") 5px -20px no-repeat
 }
 
 nav#primary h1{
-    font-size: 25px;
+    font-size: 20px;
     font-weight: 600;
     position: absolute;
     right:22px;
@@ -148,18 +158,18 @@ nav.next-prev{
 }
 a.prev,a.next{
     display: block;
-    width: 15px;
-    height:11px;
+    width: 20px;
+    height: 15px;
     text-indent: -9999px;
 }
 a.prev{
     margin:0 auto 5px auto;
-    background:transparent url("/scroll-arrow-up.ca6c27a6.png") 0 0 no-repeat;
+    background:transparent url("/scroll-arrow-up.ca6c27a6.png") -1px 0 no-repeat;
 
 }
 
 a.prev:hover{
-    background: transparent url("/scroll-arrow-up.ca6c27a6.png") 0 -11 no-repeat;
+    background: transparent url("/scroll-arrow-up.ca6c27a6.png") -1px -15 no-repeat;
 }
 
 a.next{
@@ -168,51 +178,7 @@ a.next{
 }
 
 a.next:hover{
-    background: transparent url("/scroll-arrow-down.4b6bb012.png") -1px -11px no-repeat;
-}
-
-#content{
-    z-index:4;
-    position:relative;
-    max-width: 940px;
-    padding:0 10px;
-    margin:0 auto;
-    line-height:1.7;
-}
-
-#content article{
-    width:300px;
-}
-#situation,#vaccin,#useful-link,#self-report{
-    padding-top: 105px;
-}
-
-#situation{
-    position: absolute;
-    top: 0px;
-}
-
-#vaccin{
-    position: absolute;
-    top:1090px;
-}
-
-#useful-link{
-    position: absolute;
-    top:2180px;
-}
-
-#content h1{
-    margin: 0 0 25px 0;
-    font-size:60px;
-    font-family:Georgia, sans-serif;
-    font-weight:normal;
-    line-height: 65px;
-}
-
-#self-report{
-    position: absolute;
-    top:3270px;
+    background: transparent url("/scroll-arrow-down.4b6bb012.png") -1px -15px no-repeat;
 }
 
 
@@ -226,40 +192,250 @@ a.next:hover{
     padding: 0 10px;
     margin: 0 auto;
     line-height: 1.7;
-    }
-    #content article {
-      z-index: 4;
-      width: 300px;
-      }
-      #situation ,
-      #vaccin,
-      #useful-link,
-      #self-report {
-        padding-top: 105px;
-        }
-      #situation {
-        position: absolute;
-        top: 0px;
-        }
-      #vaccin {
-        position: absolute;
-        top: 1090px;
-        }
-      #useful-link {
-        position: absolute;
-        top: 2180px;
-        }
-        #content h1 {
-          margin: 0 0 25px 0;
-          font-size: 60px;
-          font-family: Georgia, serif;
-          font-weight: normal;
-          line-height: 65px;
-          }
-      #self-report {
-        position: absolute;
-        top: 3270px;
-        }
+}
+#content article {
+    z-index: 4;
+    /* width: 900px; */
+}
+#situation ,
+#vaccine,
+#useful-link,
+#self-report {
+    padding-top: 105px;
+}
+
+#content h1 {
+    margin: 0 0 25px 0;
+    font-size: 60px;
+    font-family: Georgia, serif;
+    font-weight: normal;
+    line-height: 65px;
+}
+
+#situation {
+    position: absolute;
+    top: 0px;
+    width: 55%;
+}
+
+#situation h2{
+    font-size: 18px;
+}
+
+#situation p{
+    font-size: 20px;
+    font-weight: 600;
+}
+
+#situation .dataDisplay {
+    display:block;
+}
+
+#situation .dataDisplay .wrap1, 
+#situation .dataDisplay .wrap2 {
+    display: flex;
+}
+
+#situation .dataDisplay .card {
+    height:70px;
+    width: 50%;
+    background: var(--brown);
+    color:#fff;
+    text-align: center;
+    border-radius: 10px;
+    padding: 20px 20px;
+    margin: 15px 20px 15px 20px;
+}
+
+#vaccine {
+    position: absolute;
+    top: 1090px;
+    width: 90%;
+}
+
+#vaccine .container{
+    display: flex;
+    position: relative;
+    height: 500px;
+    width: 100%;   
+    justify-content: center;
+    align-items: center;
+    /* flex-wrap: wrap; */
+}
+
+#vaccine .container .card{
+    position: relative;
+    width: 250px;
+    height: 60px;
+    background:var(--brown);
+    margin: 0px 10px;
+    padding: 30px 20px;
+    transition: .3s ease-in-out;
+}
+
+#vaccine .container .card:hover{
+    height: 320px;
+}
+
+#vaccine .container .card .imgBx{
+    position: relative;
+    width: 240px;
+    top: -90px;
+    left: 0px;
+    z-index: 1;
+
+}
+
+#vaccine .container .card .imgBx img{
+    max-width: 100%;
+    border-radius: 10px;
+}
+
+#vaccine .container .card .content{
+    position: relative;
+    margin-top: -140px;
+    padding: 0px 0px;
+    text-align: center;
+    color:#fff;
+    visibility: hidden;
+    opacity: 0;
+    transition: .3s ease-in-out;
+}
+
+#vaccine .container .card .content h2 {
+    font-size: 20px;
+    font-weight: 600;
+    font-family: Georgia, serif;
+}
+
+#vaccine .container .card .contentp {
+    font-family: Georgia, serif;
+}
+
+#vaccine .container .card:hover .content{
+    visibility: visible;
+    opacity: 1;
+    margin-top: -40px;
+    transition-delay: .3s;
+}
+
+#useful-link {
+    position: absolute;
+    top: 2180px;
+    width: 90%;
+}
+
+#useful-link .links {
+    display: block;
+    margin-top: 30px;
+}
+
+#useful-link .links .wrap1, 
+#useful-link .links .wrap2 {
+    display: flex;
+    width: 100%;
+    justify-content: center;
+}
+
+#useful-link .links .wrap1 a, 
+#useful-link .links .wrap2 a {
+    font-size: 18px;
+    font-weight: 600;
+    background: #a04b40;
+    color: #fff;
+    height: 100px;
+    width: 30%;
+    margin: 15px 15px;
+    padding: 20px 20px;
+    border-radius: 10px;
+    transition: 0.3s ease;
+}
+
+#useful-link .links .wrap1 a:hover, 
+#useful-link .links .wrap2 a:hover {
+    transform: scale(1.1);   
+}
+
+#self-report {
+    position: absolute;
+    top: 3270px;
+    width: 90%;
+}
+
+#self-report .content{
+    display: flex;
+    background-color: var(--rice);
+}
+
+#self-report .content p{
+    color: var(--grey);
+    font-size: 18px;
+}
+
+#self-report .content span{
+    margin-top: 10px;
+    font-size: 18px;
+    color: var(--grey);
+}
+
+#self-report .content .left {
+    width: 50%;
+    padding: 20px 20px;
+}
+
+#self-report .content .left .count {
+    margin-top: 20px;
+    text-align: center;
+    height: 100px;
+    border-radius: 10px;
+    border-width: 2px;
+    border-color: #a04b40;
+}
+
+#self-report .content .left .count p {
+    font-size: 40px;
+}
+
+#self-report .content .right {
+    width: 45%;
+    padding: 20px 20px;
+}
+
+#self-report .content .right form {
+    margin-top: 10px;
+}
+
+#self-report .content .right form .field input{
+    height: 35px;
+    width: 80%;
+    margin: 10px 0;
+    border-radius: 10px;
+}
+
+#self-report .content .right form .button button {
+    color: var(--grey);
+    font-size: 18px;
+    font-weight: 600;
+    background-color: var(--yellow);
+    width: 50%;
+    height: 35px;   
+    margin-top: 10px;
+    border: 1px solid var(--grey);
+    border-radius: 10px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+#self-report .content .right form .button button:hover {
+    color: var(--pink);
+    background: var(--brown);
+}
+
+
+
+
+
+
   /* foreground (ballons/landscape) */
   #rainbow-bg3 {
     z-index: 3;
@@ -277,8 +453,8 @@ a.next:hover{
     }
     #bg3-2 {
       position: absolute;
-      top: 3000px;
-      left: 100px;
+      top: 2960px;
+      left: -130px;
       }
   /* midground (clouds) */
   #rainbow-bg2 {

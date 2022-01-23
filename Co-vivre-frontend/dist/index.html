@@ -25,8 +25,8 @@
                 </li>
 
                 <li>
-                    <h1>Vaccin</h1>
-                    <a class="vaccin" href="#vaccin">View</a>
+                    <h1>vaccine</h1>
+                    <a class="vaccine" href="#vaccine">View</a>
                 </li>
 
                 <li>
@@ -46,32 +46,76 @@
                     <h1>Situation</h1>
                 </header>
                 <div class="dataDisplay">
-                    <h2>Daily Confirmed Cases</h2>
-                    <p id="dailyConfirmed"></p>
-
-                    <h2>Total Confirmed Cases</h2>
-                    <p id="totalConfirmed"></p>
-
-                    <h2>Total Recovered Cases</h2>
-                    <p id="totalRecovered"></p>
-
-                    <h2>Total Death Cases</h2>
-                    <p id="totalDeath"></p>
+                    <div class="wrap1">
+                        <div class="card">
+                            <div class="box">
+                                <h2>Daily Confirmed Cases</h2>
+                                <p id="dailyConfirmed"></p>
+                            </div>
+                        </div>            
+                        <div class="card">
+                            <div class="box">
+                                <h2>Total Confirmed Cases</h2>
+                                <p id="totalConfirmed"></p>
+                            </div>
+                        </div>
+                    </div>                  
+                    <div class="wrap2">
+                        <div class="card">
+                            <div class="box">
+                                <h2>Total Recovered Cases</h2>
+                                <p id="totalRecovered"></p>
+                            </div>
+                        </div>   
+                        <div class="card">
+                            <div class="box">
+                                <h2>Total Death Cases</h2>
+                                <p id="totalDeath"></p>
+                            </div>
+                        </div>
+                    </div>
                     
+
                 </div>
                 <nav class="next-prev">
                     <hr>
-                    <a class="next vaccin" href="#vaccin">Next</a>
+                    <a class="next vaccine" href="#vaccine">Next</a>
                 </nav>
             </article>
 
-            <article id="vaccin">
+            <article id="vaccine">
                 <header>
-                    <h1>vaccin</h1>
+                    <h1>Vaccine</h1>
                 </header>
-                <p>
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Magnam vero quasi explicabo exercitationem! Consectetur autem rerum sequi, quo cum asperiores tempore illum ullam corporis optio at dicta assumenda eaque nam.
-                </p>
+                <div class="container">
+                    <div class="card">
+                        <div class="imgBx">
+                            <img src="/pfizer.6bd8c302.jpeg" height="150px" width="240px" alt="pfizer">
+                        </div>
+                        <div class="content">
+                            <h2>pfizer</h2>
+                            <p>In people ages 16 years and older, the Pfizer-BioNTech (COMIRNATY) vaccine was 95% effective at preventing laboratory-confirmed infection with the virus that causes COVID-19 in people who received two doses and had no evidence of being previously infected.</p>
+                        </div>
+                    </div>
+                    <div class="card">
+                        <div class="imgBx">
+                            <img src="/moderna.db6f9d28.jpg" height="150px" width="240px" alt="">
+                        </div>
+                        <div class="content">
+                            <h2>moderna</h2>
+                            <p>Moderna (mRNA COVID-19 vaccines), in people ages 18 years and older, was 94.1% effective at preventing laboratory-confirmed COVID-19 infection in people who received two doses and had no evidence of being previously infected.</p>
+                        </div>
+                    </div>
+                    <div class="card">
+                        <div class="imgBx">
+                            <img src="/astrazeneca.dcf41651.jpg" height="150px" width="240px" alt="">
+                        </div>
+                        <div class="content">
+                            <h2>astrazeneca</h2>
+                            <p>U.S. Clinical trials showed that beginning 2 weeks after the second dose, the AstraZeneca Vaxzevria COVID-19 vaccine was 74% effective in protecting trial participants against COVID-19.</p>
+                        </div>
+                    </div>
+                </div>
                 <nav class="next-prev">
                     <a class="prev situation" href="#situation">Prev</a>
                     <hr>
@@ -83,11 +127,20 @@
                 <header>
                     <h1>Useful Link</h1>
                 </header>
-                <p>
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Magnam vero quasi explicabo exercitationem! Consectetur autem rerum sequi, quo cum asperiores tempore illum ullam corporis optio at dicta assumenda eaque nam.
-                </p>
+                <div class="links">
+                    <div class="wrap1">
+                        <a href="https://santemontreal.qc.ca/en/public/coronavirus-covid-19/situation-of-the-coronavirus-covid-19-in-montreal/" class="buttons">Where to check detailed current situation in Montreal</a>
+                        <a href="https://santemontreal.qc.ca/en/public/coronavirus-covid-19/vaccination/" class="buttons">Where to find information about vaccination</a>
+                        <a href="https://santemontreal.qc.ca/en/public/coronavirus-covid-19/coronavirus-covid-19-for-people-with-covid-19/#c36313" class="buttons">What to do if I test positive</a>    
+                    </div>
+                    <div class="wrap2">
+                        <a href="https://www.quebec.ca/en/health/health-issues/a-z/2019-coronavirus/testing-for-covid-19/rapid-home-testing" class="buttons">Instructions for rapid home testing</a>
+                        <a href="https://www.quebec.ca/en/health/health-issues/a-z/2019-coronavirus/measures-in-force/about-the-measures-in-force" class="buttons">Current Governmental measures</a>
+                        <a href="https://www.canada.ca/en/services/benefits/covid19-emergency-benefits.html" class="buttons">Available Governmental benefits and services</a>
+                    </div>
+                </div>
                 <nav class="next-prev">
-                    <a class="prev vaccin" href="#vaccin">Prev</a>
+                    <a class="prev vaccine" href="#vaccine">Prev</a>
                     <hr>
                     <a class="next self-report" href="#self-report">Next</a>
                 </nav>
@@ -97,9 +150,36 @@
                 <header>
                     <h1>Self Report</h1>
                 </header>
-                <p>
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Magnam vero quasi explicabo exercitationem! Consectetur autem rerum sequi, quo cum asperiores tempore illum ullam corporis optio at dicta assumenda eaque nam.
-                </p>
+                <div class="content">
+                    <div class="left">
+                        <p>The currently reported cases on the official website does not take into account of those who test positive using the rapid test kit,
+                            but this data is also an important index for us to understand how serious our current situation is. 
+                            Therefore, we make a calculation here.
+                        </p>
+                        <span>The current count of self-test positive cases is: </span>
+                        <div class="count">
+                            <p id="cases-count">0</p>
+                        </div>
+                    </div>
+                    <div class="right">
+                        <p>If you self-test positive, please fill out the form below so that we can take you into account.</p>
+                        <form action="https://formsubmit.co/77e1edf49060666521fc567d6d83f8fd" method="POST">
+                            <div class="field firstName">
+                                <input type="text" name="user_first_name" placeholder="First Name" required="">
+                            </div>
+                            <div class="field lastName">
+                                <input type="text" name="user_last_name" placeholder="Last Name" required="">
+                            </div>
+                            <div class="field email">
+                                <input type="email" name="user_email" placeholder="Email" required="">
+                            </div>
+                            <div class="button">
+                                <button type="submit">Submit</button>
+                            </div>              
+                        </form>
+                    </div>
+                </div>
+                
                 <nav class="next-prev">
                     <a class="prev useful-link" href="#useful-link">Prev</a>
                     <hr>
@@ -110,7 +190,7 @@
             <!-- rainbow foreground -->
 			<div id="rainbow-bg3">
 				<img id="bg3-1" src="/side-people.96caf1b0.png" width="700" height="600" alt="side-people">
-				<img id="bg3-2" src="/ground-people.f50aa898.png" width="800" height="583" alt="ground-people">
+				<img id="bg3-2" src="/ground-people.f50aa898.png" width="1200" height="500" alt="ground-people">
 			</div>
 			
 			<!-- Rainbow  midground clouds -->

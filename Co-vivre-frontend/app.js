@@ -56,14 +56,14 @@ $(document).ready(function() {
     function redrawDotNav(){
         var section1Top =  0;
         // The top of each section is offset by half the distance to the previous section.
-        var section2Top =  $('#vaccin').offset().top - (($('#useful-link').offset().top - $('#vaccin').offset().top) / 2);
+        var section2Top =  $('#vaccine').offset().top - (($('#useful-link').offset().top - $('#vaccine').offset().top) / 2);
         var section3Top =  $('#useful-link').offset().top - (($('#self-report').offset().top - $('#useful-link').offset().top) / 2);
         var section4Top =  $('#self-report').offset().top - (($(document).height() - $('#self-report').offset().top) / 2);;
         $('nav#primary a').removeClass('active');
         if($(document).scrollTop() >= section1Top && $(document).scrollTop() < section2Top){
             $('nav#primary a.situation').addClass('active');
         } else if ($(document).scrollTop() >= section2Top && $(document).scrollTop() < section3Top){
-            $('nav#primary a.vaccin').addClass('active');
+            $('nav#primary a.vaccine').addClass('active');
         } else if ($(document).scrollTop() >= section3Top && $(document).scrollTop() < section4Top){
             $('nav#primary a.useful-link').addClass('active');
         } else if ($(document).scrollTop() >= section4Top){
@@ -90,9 +90,9 @@ $(document).ready(function() {
 		});
     	return false;
 	});
-    $('a.vaccin').click(function(){
+    $('a.vaccine').click(function(){
     	$('html, body').animate({
-    		scrollTop:$('#vaccin').offset().top
+    		scrollTop:$('#vaccine').offset().top
     	}, 1000, function() {
 	    	rainbowScroll(); // Callback is required for iOS
 		});
@@ -114,6 +114,13 @@ $(document).ready(function() {
 		});
     	return false;
     });
+
+
+    var positive = 0;
+    $('.content .right form .button button').click(function(){
+        positive ++;
+        document.getElementById("cases-count").innerHTML = positive;
+    })
 
 });
 
